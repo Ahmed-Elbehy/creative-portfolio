@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,33 @@
     <link rel="stylesheet" href="CSS/style.css">
     <title>Frontend Developer Portfolio</title>
 </head>
+
 <body>
     <!-- start navebar -->
-    <nav class="navbar navbar-expand-lg px-5 pt-4 fixed-top">
+    <nav id="navbar" class="navbar   navbar-expand-lg px-5 pt-4 fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img class="w-50" src="images/logo-light.png"></img>
+                <img id="image-logo" class="w-50" src="images/logo-light.png"></img>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <!-- From Uiverse.io by Cevorob -->
+                <label class="burger" for="burger">
+                    <input type="checkbox" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link  text-uppercase" aria-current="page" href="#">Home</a>
+                    <li class="nav-item home position-relative">
+                        <a class="nav-link nav-selected  text-uppercase active" aria-current="page" href="#">Home</a>
+                        <div class="home-pages">
+                            <a class="nav-link text-uppercase " aria-current="page" href="#">Home1 </a>
+                            <a class="nav-link text-uppercase " aria-current="page" href="#">Home2</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-uppercase" href="#">about</a>
@@ -39,34 +53,35 @@
                         <a class="nav-link text-uppercase" href="#">news</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link   rounded-pill px-3 contactBtn text-uppercase " href="#">contact</a>
+                        <a class="nav-link contact  rounded-pill px-3 contactBtn text-uppercase " href="#">contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- end navebar -->
-    
+
     <!--start landing page -->
-    <section id="landing" >
+    <section id="landing">
         <div class=" text-center justify-content-center align-items-end  pb-4">
             <div>
-                <h3 class="text-center" >Front end Developer</h3>
+                <h3 class="text-center">Front end Developer</h3>
                 <p>Building beautiful and responsive web experiences with modern technologies.</p>
                 <div>
-                    <button type="button" class="btn rounded-pill px-4 text-uppercase btn-light mt-2">view projects</button>
+                    <button type="button" class="btn rounded-pill px-4 text-uppercase btn-light mt-2">view
+                        projects</button>
                     <button class="btn rounded-pill px-4 text-uppercase mt-2" type="portfolio">contact me</button>
-                </div>            
+                </div>
             </div>
 
         </div>
-        
-        <div class="section-center">
-                <div class="section-path">
-                    <div class="globe">
-                        <span></span>
-                    </div>
+
+        <div id="btn-scroller" class="section-center">
+            <div class="section-path">
+                <div class="globe">
+                    <span></span>
                 </div>
+            </div>
         </div>
     </section>
     <!--end landing page -->
@@ -77,11 +92,12 @@
             <div class="col-md-4 ">
                 <div class=" d-flex">
                     <span class="me-3 icon">
-                            <i class="fa-solid fa-code"></i>
+                        <i class="fa-solid fa-code"></i>
                     </span>
                     <div>
                         <h5 class="fw-bolder">Clean Code</h5>
-                        <p class="paragraph text-black-50 ">I write well-structured, maintainable code following industry best practices and modern development standards.</p>
+                        <p class="paragraph text-black-50 ">I write well-structured, maintainable code following
+                            industry best practices and modern development standards.</p>
                     </div>
                 </div>
             </div>
@@ -91,9 +107,10 @@
                     <span class="me-3 icon">
                         <i class="fa-solid fa-mobile"></i>
                     </span>
-                    <div >
+                    <div>
                         <h5 class="fw-bolder">Responsive Design</h5>
-                        <p class="paragraph text-black-50">All projects are fully responsive and optimized for desktop, tablet, and mobile devices with pixel-perfect layouts.</p>
+                        <p class="paragraph text-black-50">All projects are fully responsive and optimized for desktop,
+                            tablet, and mobile devices with pixel-perfect layouts.</p>
                     </div>
                 </div>
             </div>
@@ -101,11 +118,12 @@
             <div class="col-md-4  ">
                 <div class=" d-flex ">
                     <span class="me-3 icon ">
-                        <i class="fa-solid fa-zap"></i>         
+                        <i class="fa-solid fa-zap"></i>
                     </span>
                     <div>
                         <h5 class="fw-bolder">Performance Focused</h5>
-                        <p class="paragraph text-black-50">I create fast-loading, efficient applications with optimized performance and excellent user experience across all platforms.</p>
+                        <p class="paragraph text-black-50">I create fast-loading, efficient applications with optimized
+                            performance and excellent user experience across all platforms.</p>
                     </div>
                 </div>
             </div>
@@ -113,14 +131,15 @@
     </section>
     <!-- end section two -->
     <!-- start section three -->
-    <section id="our-work" class="d-flex justify-content-center  " >
+    <section id="our-work" class="d-flex justify-content-center  ">
         <div class="container row  justify-content-center">
             <div class="col-sm-12 col-md-6">
                 <div class="workcontent">
-                    <h2 class="text-capitalize text-center">Recent Projects</h2>
+                    <h2 class="text-capitalize text-center">Our work</h2>
                 </div>
                 <div class="workcontent">
-                    <p>Explore some of my recent projects showcasing modern web development with React, JavaScript, CSS, and responsive design principles.</p>
+                    <p>Explore some of my recent projects showcasing modern web development with React, JavaScript, CSS,
+                        and responsive design principles.</p>
                 </div>
             </div>
             <div class="container">
@@ -130,17 +149,33 @@
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 d-flex">
                                     <div class="card">
-                                        <img src="images/Photorealistic-Magazine-MockUp-2-full-600x600.jpg" class="card-img-top" alt="...">
+                                        <img src="images/A4-Paper-PSD-MockUp-4-600x600.jpg" class="card-img-top"
+                                            alt="...">
+                                        <div class="slidefact">
+                                            <h4>
+                                                Extended Post
+                                            </h4>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4 d-flex">
                                     <div class="card">
                                         <img src="images/Preview-1-600x600.jpg" class="card-img-top" alt="...">
+                                        <div class="slidefact">
+                                            <h4>
+                                                Slider Post
+                                            </h4>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4 d-flex">
                                     <div class="card">
                                         <img src="images/tags-600x600.jpg" class="card-img-top" alt="...">
+                                        <div class="slidefact">
+                                            <h4>
+                                                Brilliant Tags
+                                            </h4>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -149,17 +184,30 @@
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 d-flex">
                                     <div class="card">
-                                        <img src="images/Paper-Pouch-Packaging-MockUp-600x600.jpg" class="card-img-top" alt="...">
+                                        <img src="images/Paper-Pouch-Packaging-MockUp-600x600.jpg" class="card-img-top"
+                                            alt="...">
+                                        <div class="slidefact">
+                                            <h4>cool Bag</h4>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4 d-flex">
                                     <div class="card">
-                                        <img src="images/Ceramic-Bottles-PSD-Mockups-full-600x600.jpg" alt="">
+                                        <img src="images/A4-Paper-PSD-MockUp-4-600x600.jpg" alt="">
+                                        <div class="slidefact">
+                                            <h4>
+                                                Extended Post
+                                            </h4>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4 d-flex">
                                     <div class="card">
-                                        <img src="images/Photorealistic-Magazine-MockUp-2-full-600x600.jpg" class="card-img-top" alt="...">
+                                        <img src="images/Photorealistic-Magazine-MockUp-2-full-600x600.jpg"
+                                            class="card-img-top" alt="...">
+                                        <div class="slidefact">
+                                            <h4>Basic Post</h4>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -168,33 +216,52 @@
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 d-flex">
                                     <div class="card">
-                                        <img src="images/Paper-Pouch-Packaging-MockUp-600x600.jpg" class="card-img-top" alt="...">
+                                        <img src="images/Preview-1-600x600.jpg" class="card-img-top" alt="...">
+                                        <div class="slidefact">
+                                            <h4>
+                                                Slider Post
+                                            </h4>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4 d-flex">
                                     <div class="card">
                                         <img src="images/Ceramic-Bottles-PSD-Mockups-full-600x600.jpg" alt="">
+                                        <div class="slidefact">
+                                            <h4>
+                                                Fullwidth Post
+                                            </h4>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4 d-flex">
                                     <div class="card">
-                                        <img src="images/Photorealistic-Magazine-MockUp-2-full-600x600.jpg" class="card-img-top" alt="...">
+                                        <img src="images/Shopping-Bag-PSD-MockUp-2-600x600.jpg" class="card-img-top"
+                                            alt="...">
+                                        <div class="slidefact">
+                                            <h4>
+                                                Video Post
+                                            </h4>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    
+
                     </div>
-                        <div class="carousel-indicators position-relative">
-                            <button type="button" data-bs-target="#slid-our-work" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#slid-our-work" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#slid-our-work" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
+                    <div class="carousel-indicators position-relative">
+                        <button type="button" data-bs-target="#slid-our-work" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#slid-our-work" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#slid-our-work" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
                 </div>
-        </div>
-        <div class="view-all   d-flex justify-content-center pb-5">
-            <button class="btn view-all-btn rounded-5 ">View All</button>
-        </div>
+            </div>
+            <div class="view-all   d-flex justify-content-center pb-5">
+                <button class="btn view-all-btn rounded-5 ">View All</button>
+            </div>
         </div>
     </section>
     <!-- end section three -->
@@ -212,7 +279,8 @@
                         <div class="carousel-item active col-md-6 col-lg-12  ">
                             <div class="d-flex flex-column align-items-center">
                                 <p class="text-white-50 main-slid-text">
-                                    Humanitatis per seacula quarta decima et quinta decima. Modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum quarta decima. Modo typi quartasab.
+                                    Humanitatis per seacula quarta decima et quinta decima. Modo typi, qui nunc nobis
+                                    videntur parum clari, fiant sollemnes in futurum quarta decima. Modo typi quartasab.
                                 </p>
                                 <h5 class="text-white py-3">
                                     Lorem, ipsum.
@@ -225,7 +293,8 @@
                         <div class="carousel-item  col-md-6 col-lg-12">
                             <div class="d-flex flex-column align-items-center">
                                 <p class="text-white-50 main-slid-text">
-                                    Humanitatis per seacula quarta decima et quinta decima. Modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum quarta decima. Modo typi quartasab.
+                                    Humanitatis per seacula quarta decima et quinta decima. Modo typi, qui nunc nobis
+                                    videntur parum clari, fiant sollemnes in futurum quarta decima. Modo typi quartasab.
                                 </p>
                                 <h5 class="text-white py-3">
                                     Lorem, ipsum.
@@ -238,7 +307,8 @@
                         <div class="carousel-item col-md-6 col-lg-12">
                             <div class="d-flex flex-column align-items-center">
                                 <p class="text-white-50 main-slid-text">
-                                    Humanitatis per seacula quarta decima et quinta decima. Modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum quarta decima. Modo typi quartasab.
+                                    Humanitatis per seacula quarta decima et quinta decima. Modo typi, qui nunc nobis
+                                    videntur parum clari, fiant sollemnes in futurum quarta decima. Modo typi quartasab.
                                 </p>
                                 <h5 class="text-white py-3">
                                     Lorem, ipsum.
@@ -251,7 +321,8 @@
                         <div class="carousel-item col-md-6 col-lg-12">
                             <div class="d-flex flex-column align-items-center">
                                 <p class="text-white-50 main-slid-text">
-                                    Humanitatis per seacula quarta decima et quinta decima. Modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum quarta decima. Modo typi quartasab.
+                                    Humanitatis per seacula quarta decima et quinta decima. Modo typi, qui nunc nobis
+                                    videntur parum clari, fiant sollemnes in futurum quarta decima. Modo typi quartasab.
                                 </p>
                                 <h5 class="text-white py-3">
                                     Lorem, ipsum.
@@ -261,14 +332,18 @@
                                 </h5>
                             </div>
                         </div>
-                        
+
                     </div>
                     <!--start   control buttons -->
                     <div class="carousel-indicators position-relative">
-                        <button type="button" data-bs-target="#slid-section-four" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#slid-section-four" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#slid-section-four" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#slid-section-four" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#slid-section-four" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#slid-section-four" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#slid-section-four" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#slid-section-four" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
                     </div>
                     <!--end   control buttons -->
                 </div>
@@ -294,7 +369,10 @@
                                     <div class="card h-100">
                                         <div class="box p-2 ">
                                             <h4 class="py-2">pasic post</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptates dolorum enim numquam, iusto magni ratione, aspernatur temporibus, minima ex modi? Itaque ratione sequi vero hic quaerat? Sapiente, velit magni? </p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+                                                voluptates dolorum enim numquam, iusto magni ratione, aspernatur
+                                                temporibus, minima ex modi? Itaque ratione sequi vero hic quaerat?
+                                                Sapiente, velit magni? </p>
                                             <div class="read-more d-flex align-items-center">
                                                 <span class="link">
                                                     <a href="">
@@ -302,7 +380,7 @@
                                                         <span class="icon">
                                                             <i class="fa-solid fa-arrow-right"></i>
                                                         </span>
-                                                        
+
                                                     </a>
                                                 </span>
                                             </div>
@@ -313,7 +391,10 @@
                                     <div class="card h-100">
                                         <div class="box p-2 ">
                                             <h4 class="py-2">pasic post</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptates dolorum enim numquam, iusto magni ratione, aspernatur temporibus, minima ex modi? Itaque ratione sequi vero hic quaerat? Sapiente, velit magni? </p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+                                                voluptates dolorum enim numquam, iusto magni ratione, aspernatur
+                                                temporibus, minima ex modi? Itaque ratione sequi vero hic quaerat?
+                                                Sapiente, velit magni? </p>
                                             <div class="read-more d-flex align-items-center">
                                                 <span class="link">
                                                     <a href="">
@@ -321,7 +402,7 @@
                                                         <span class="icon">
                                                             <i class="fa-solid fa-arrow-right"></i>
                                                         </span>
-                                                        
+
                                                     </a>
                                                 </span>
                                             </div>
@@ -332,7 +413,10 @@
                                     <div class="card h-100">
                                         <div class="box p-2 ">
                                             <h4 class="py-2">pasic post</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptates dolorum enim numquam, iusto magni ratione, aspernatur temporibus, minima ex modi? Itaque ratione sequi vero hic quaerat? Sapiente, velit magni? </p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+                                                voluptates dolorum enim numquam, iusto magni ratione, aspernatur
+                                                temporibus, minima ex modi? Itaque ratione sequi vero hic quaerat?
+                                                Sapiente, velit magni? </p>
                                             <div class="read-more d-flex align-items-center">
                                                 <span class="link">
                                                     <a href="">
@@ -340,7 +424,7 @@
                                                         <span class="icon">
                                                             <i class="fa-solid fa-arrow-right"></i>
                                                         </span>
-                                                        
+
                                                     </a>
                                                 </span>
                                             </div>
@@ -355,7 +439,10 @@
                                     <div class="card h-100">
                                         <div class="box p-2 ">
                                             <h4 class="py-2">pasic post</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptates dolorum enim numquam, iusto magni ratione, aspernatur temporibus, minima ex modi? Itaque ratione sequi vero hic quaerat? Sapiente, velit magni? </p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+                                                voluptates dolorum enim numquam, iusto magni ratione, aspernatur
+                                                temporibus, minima ex modi? Itaque ratione sequi vero hic quaerat?
+                                                Sapiente, velit magni? </p>
                                             <div class="read-more d-flex align-items-center">
                                                 <span class="link">
                                                     <a href="">
@@ -363,7 +450,7 @@
                                                         <span class="icon">
                                                             <i class="fa-solid fa-arrow-right"></i>
                                                         </span>
-                                                        
+
                                                     </a>
                                                 </span>
                                             </div>
@@ -374,7 +461,10 @@
                                     <div class="card h-100">
                                         <div class="box p-2 ">
                                             <h4 class="py-2">pasic post</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptates dolorum enim numquam, iusto magni ratione, aspernatur temporibus, minima ex modi? Itaque ratione sequi vero hic quaerat? Sapiente, velit magni? </p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+                                                voluptates dolorum enim numquam, iusto magni ratione, aspernatur
+                                                temporibus, minima ex modi? Itaque ratione sequi vero hic quaerat?
+                                                Sapiente, velit magni? </p>
                                             <div class="read-more d-flex align-items-center">
                                                 <span class="link">
                                                     <a href="">
@@ -382,7 +472,7 @@
                                                         <span class="icon">
                                                             <i class="fa-solid fa-arrow-right"></i>
                                                         </span>
-                                                        
+
                                                     </a>
                                                 </span>
                                             </div>
@@ -393,7 +483,10 @@
                                     <div class="card h-100">
                                         <div class="box p-2 ">
                                             <h4 class="py-2">pasic post</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptates dolorum enim numquam, iusto magni ratione, aspernatur temporibus, minima ex modi? Itaque ratione sequi vero hic quaerat? Sapiente, velit magni? </p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+                                                voluptates dolorum enim numquam, iusto magni ratione, aspernatur
+                                                temporibus, minima ex modi? Itaque ratione sequi vero hic quaerat?
+                                                Sapiente, velit magni? </p>
                                             <div class="read-more d-flex align-items-center">
                                                 <span class="link">
                                                     <a href="">
@@ -401,7 +494,7 @@
                                                         <span class="icon">
                                                             <i class="fa-solid fa-arrow-right"></i>
                                                         </span>
-                                                        
+
                                                     </a>
                                                 </span>
                                             </div>
@@ -412,12 +505,14 @@
                         </div>
                     </div>
                     <div class="carousel-indicators position-relative mt-4">
-                        <button type="button" data-bs-target="#latest-news" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#latest-news" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#latest-news" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#latest-news" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
                     </div>
                 </div>
             </div>
-            <!-- & end slaider Latest News --> 
+            <!-- & end slaider Latest News -->
         </div>
     </section>
     <!-- /* end section Latest News */ -->
@@ -427,46 +522,60 @@
             <div class="slider">
                 <div class="slide-track">
                     <div class="slide">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250"
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250"
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250"
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250"
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250"
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250"
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250"
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250"
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250"
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250"
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250"
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250"
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250"
+                            alt="" />
                     </div>
                     <div class="slide">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250"
+                            alt="" />
                     </div>
                 </div>
             </div>
@@ -482,7 +591,7 @@
                 </div>
                 <div class="description mb-3">
                     <p class="text">
-                        I am a subtitle, feel free to change me!             
+                        I am a subtitle, feel free to change me!
                     </p>
                 </div>
                 <div class="button">
@@ -501,7 +610,9 @@
                     <div class="card h-100">
                         <h1 class="title">About us</h1>
                         <p class="text-about text-white-50 ">
-                            I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur. I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur.
+                            I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet,
+                            consectetur. I am text block. Click edit button to change this text. Lorem ipsum dolor sit
+                            amet, consectetur.
                         </p>
                     </div>
                 </div>
@@ -545,7 +656,7 @@
                                 <span class="me-2">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </span>
-                            
+
                                 <p>Manchester Road 123-78B, Silictown 7854MD, Great Country</p>
                             </div>
                             <ul class="contact-tols">
@@ -577,17 +688,36 @@
                     </a>
                     <a href="" class="twitter">
                         <i class="fa-brands fa-twitter"></i>
-                    </a> 
+                    </a>
                     <a href="" class="linkedin">
                         <i class="fa-brands fa-square-linkedin"></i>
                     </a>
-                    
-                
+
+
                 </div>
             </div>
         </div>
     </footer>
     <!-- ^ end footer -->
+    <!-- START UP BUTTON -->
+    <button class="go-up">
+        <a href="#landing">
+            <i class="fa-solid fa-angle-up"></i>
+        </a>
+    </button>
+    <!-- END UP BUTTON -->
+<!--START SHOPING && SETTING  -->
+<div class="saidicons">
+    <div class="setting mb-2">
+        <i class="fa-solid fa-gears"></i>
+    </div>
+    <div class="shope">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+</div>
+<!--START END && SETTING  -->
     <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
 </body>
+
 </html>
